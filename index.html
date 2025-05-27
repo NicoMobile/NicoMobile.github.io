@@ -1,67 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Your Name</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     body {
-      max-width: 700px;
-      margin: 40px auto;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.6;
-      padding: 0 20px;
-      color: #000;
-      background: #fff;
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+      color: #111;
     }
-    nav {
-      margin-bottom: 40px;
-      font-weight: bold;
+
+    #profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
     }
-    nav a {
-      margin-right: 20px;
-      text-decoration: none;
-      color: #555;
+
+    .section__pic-container img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 2px solid #ccc;
+      margin-bottom: 20px;
+      object-fit: cover;
     }
-    nav a:hover {
-      color: #007acc;
+
+    .title {
+      font-size: 2em;
+      margin: 5px 0;
     }
-    h1, h2 {
-      font-weight: 600;
+
+    .section__text__p1 {
+      font-size: 1.1em;
+      color: gray;
     }
+
+    .section__text__p2 {
+      font-size: 1.1em;
+      margin-top: 10px;
+    }
+
+    .icon {
+      width: 24px;
+      height: 24px;
+      margin-left: 10px;
+      vertical-align: middle;
+      cursor: pointer;
+    }
+
+    #socials-container {
+      margin-top: 20px;
+    }
+
+    #socials-container .icon {
+      margin: 0 10px;
+    }
+
     a {
-      color: #007acc;
       text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="cv.pdf">CV</a>
-    <a href="publications.html">Publications</a>
-    <a href="teaching.html">Teaching</a>
-    <a href="contact.html">Contact</a>
-  </nav>
 
-  <h1>Your Name</h1>
-  <p>
-    I'm a researcher in XYZ working on topics such as ABC, DEF, and GHI.
-  </p>
+  <!-- Profile Section -->
+  <section id="profile">
+    <div class="section__pic-container">
+      <img src="assets/profile-pic.png" alt="Your profile picture" />
+    </div>
+    <div class="section__text">
+      <p class="section__text__p1">Hello, I'm</p>
+      <h1 class="title">Your Name</h1>
 
-  <h2>About Me</h2>
-  <p>
-    You can write a short bio here, including what you're studying, where you're working, or your academic interests.
-  </p>
+      <p class="section__text__p2">
+        Undergraduate at 
+        <a href="https://usc.edu/" style="color:#990000; font-weight:bold;">University of Southern California</a>
+        <img src="assets/usc-logo.png" alt="USC logo" class="icon" />
+      </p>
 
-  <h2>News</h2>
-  <ul>
-    <li>May 2025: Finished building my personal website 🎉</li>
-    <li>Apr 2025: Paper accepted at XYZ Conference</li>
-  </ul>
+      <p class="section__text__p2">
+        PhD student at 
+        <a href="https://duke.edu/" style="color:#001a57; font-weight:bold;">Duke University</a>
+        <img src="assets/duke-logo.png" alt="Duke University logo" class="icon" />
+      </p>
+
+      <p class="section__text__p2">
+        Advised by 
+        <a href="https://example.com" style="color:#333; font-weight:bold;">Professor Smith</a>
+        at the 
+        <a href="https://labwebsite.com" style="color:#4b0082; font-weight:bold;">My Research Lab</a>
+        <img src="assets/lab-logo.png" alt="Lab logo" class="icon" />
+      </p>
+
+      <div id="socials-container">
+        <img src="assets/google-scholar.png" alt="Google Scholar" class="icon" onclick="location.href='https://scholar.google.com'" />
+        <img src="assets/linkedin.png" alt="LinkedIn" class="icon" onclick="location.href='https://linkedin.com'" />
+        <img src="assets/github.png" alt="GitHub" class="icon" onclick="location.href='https://github.com'" />
+      </div>
+    </div>
+  </section>
 
 </body>
 </html>
+
