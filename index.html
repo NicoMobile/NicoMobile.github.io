@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Your Name</title>
+  <title>Nico Kinkade</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     body {
@@ -11,6 +11,41 @@
       padding: 0;
       background-color: #fff;
       color: #111;
+      display: flex;
+    }
+
+    /* Sidebar */
+    nav {
+      width: 200px;
+      background-color: #f4f4f4;
+      height: 100vh;
+      padding: 30px 20px;
+      box-sizing: border-box;
+      position: fixed;
+    }
+
+    nav h2 {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+    }
+
+    nav a {
+      display: block;
+      margin: 10px 0;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #007acc;
+    }
+
+    /* Main content */
+    main {
+      margin-left: 220px;
+      padding: 40px 20px;
+      flex-grow: 1;
     }
 
     #profile {
@@ -18,7 +53,6 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
-      padding: 40px 20px;
     }
 
     .section__pic-container img {
@@ -76,42 +110,53 @@
 </head>
 <body>
 
-  <!-- Profile Section -->
-  <section id="profile">
-    <div class="section__pic-container">
-      <img src="assets/profile-pic.png" alt="Your profile picture" />
-    </div>
-    <div class="section__text">
-      <p class="section__text__p1">Hello, I'm</p>
-      <h1 class="title">Nico Kinkade</h1>
+  <!-- Sidebar -->
+  <nav>
+    <h2>Nico Kinkade</h2>
+    <a href="index.html">Home</a>
+    <a href="cv.pdf">CV</a>
+    <a href="publications.html">Publications</a>
+    <a href="mailto:your@email.com">Contact</a>
+  </nav>
 
-      <p class="section__text__p2">
-        I earned a B.S. in Mechanical Engineering as a Merit Scholar at the
-        <a href="https://ame.usc.edu/" style="color:#990000; font-weight:bold;">University of Southern California</a>
-        <img src="assets/usc-logo.png" alt="USC logo" class="logo-wide" />
-      </p>
-
-      <p class="section__text__p2">
-        I am currently a PhD student at 
-        <a href="https://mems.duke.edu/" style="color:#001a57; font-weight:bold;">Duke University</a>
-        <img src="assets/duke-logo.png" alt="Duke University logo" class="logo-duke" />
-      </p>
-
-      <p class="section__text__p2">
-        Advised by 
-        <a href="https://example.com" style="color:#333; font-weight:bold;">Professor XYZ</a>
-        at the 
-        <a href="https://labwebsite.com" style="color:#4b0082; font-weight:bold;">XYZ Research Lab</a>
-        <img src="assets/lab-logo.png" alt="Lab logo" class="icon" />
-      </p>
-
-      <div id="socials-container">
-        <img src="assets/google-scholar.png" alt="Google Scholar" class="icon" onclick="location.href='https://scholar.google.com'" />
-        <img src="assets/linkedin.png" alt="LinkedIn" class="icon" onclick="location.href='https://linkedin.com'" />
-        <img src="assets/github.png" alt="GitHub" class="icon" onclick="location.href='https://github.com'" />
+  <!-- Main Content -->
+  <main>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="assets/profile-pic.png" alt="Your profile picture" />
       </div>
-    </div>
-  </section>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Nico Kinkade</h1>
+
+        <p class="section__text__p2">
+          I earned a B.S. in Mechanical Engineering as a Merit Scholar at the
+          <a href="https://ame.usc.edu/" style="color:#990000; font-weight:bold;">University of Southern California</a>
+          <img src="assets/usc-logo.png" alt="USC logo" class="logo-wide" />
+        </p>
+
+        <p class="section__text__p2">
+          I am currently a PhD student at 
+          <a href="https://mems.duke.edu/" style="color:#001a57; font-weight:bold;">Duke University</a>
+          <img src="assets/duke-logo.png" alt="Duke University logo" class="logo-duke" />
+        </p>
+
+        <p class="section__text__p2">
+          Advised by 
+          <a href="https://example.com" style="color:#333; font-weight:bold;">Professor XYZ</a>
+          at the 
+          <a href="https://labwebsite.com" style="color:#4b0082; font-weight:bold;">XYZ Research Lab</a>
+          <img src="assets/lab-logo.png" alt="Lab logo" class="icon" />
+        </p>
+
+        <div id="socials-container">
+          <img src="assets/google-scholar.png" alt="Google Scholar" class="icon" onclick="location.href='https://scholar.google.com'" />
+          <img src="assets/linkedin.png" alt="LinkedIn" class="icon" onclick="location.href='https://linkedin.com'" />
+          <img src="assets/github.png" alt="GitHub" class="icon" onclick="location.href='https://github.com'" />
+        </div>
+      </div>
+    </section>
+  </main>
 
 </body>
 </html>
